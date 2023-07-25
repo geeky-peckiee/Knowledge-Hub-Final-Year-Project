@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    background-color: white;
+    width: 80em;
+    max-width: 100%;
+    height: 80em;
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+header {
+    width : 98em;
+    height: 5em;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+
+}
+img[alt="nuesa logo"] {
+    width: 3em;
+    border-radius: 50em;
+    margin-top: -1em;
+    
+}
+.profile {
+    margin-top: -0.5em;
+}
+nav {
+    display: flex;
+    gap: 1em;  
+    margin-left: -55em;
+}
+nav a {
+    text-decoration: none;
+    font-size: 1em;
+    color: green;
+}
+nav button {
+    background: none;
+    border-radius: 1em;
+    font-size: 0.8em;
+    padding: 0.4em;
+    margin-top: -1em;
+    font-weight: bold;
+    border: 2px solid rgb(207, 112, 4);
+    color: rgb(207, 112, 4);
+}
+nav a:hover {
+    font-weight: bold;
+}
+section {
+    width: 80em;
+    max-width: 100%;
+    height: 20em;
+    margin: 2em 2em 0em 12em;
+    display: grid;
+    grid-template-areas: 'material1 material2 material3 material4'
+                          'material5 material6 material7 material8';
+    row-gap: 2em;
+    column-gap: 0.5em;
+    }
+.Materials {
+    width: 13em;
+    background-color: green;
+    padding: 2em;
+    border-radius: 2em;
+    color: white;
+}
+ .dept-one {
+    grid-area: material1;
+}
+.dept-two {
+    grid-area: material2;
+}
+.dept-three {
+    grid-area: material3;
+}
+.dept-four {
+    grid-area: material4;
+}
+.dept-five {
+    grid-area: material5;
+}
+.dept-six {
+    grid-area: material6;
+}
+.dept-seven {
+    grid-area: material7;
+}
+.dept-eight {
+    grid-area: material8;
+}
+.Materials h2{
+    color: white;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+}
+.Materials a{
+    color: white;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    text-align: justify;
+}

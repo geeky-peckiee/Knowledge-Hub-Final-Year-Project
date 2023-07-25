@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Repository</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <main class='login-form fade-in'>
+            <h1>Login</h1>
+              <form action="#">
+                  
+                  <label for="username">Username</label><br />
+                  <input type="text" placeholder='Type your username' id="username" required/><br />
+      
+                  <label for="password">Password</label><br />
+                  <input type="password" placeholder='Type your password' id="password" required /><br />
+
+                <input type="checkbox" id="show-password-toggle"><label for="show-password-toggle" class="show-password">Show password</label>
+                 
+                  
+                  
+                  <a href="#">Forgot password?</a><br />
+      
+                  <button type="submit" onclick="handleLoginSubmit()">
+                      Login
+                  </button>
+              </form>
+              <div id="error-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="error-message"></p>
+                </div>
+              </div>
+          </div>
+    </main>
+
+
+
+<script src="Login.js"></script>
+</body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <main class='register-form fade-in'>
+            <h2>Register</h2>
+              <form id="registration-form" action="../Dashboard/Dashboard.html">
+
+                  <label for="Name">Full Name</label><br />
+                  <input id="full-name" type="text" placeholder='Type your fullname here' /><br />
+      
+                  <label for="Matric No.">Reg. No.</label><br />
+                  <input id="registration-number" type="text" placeholder='Type your reg. no' /><br />
+      
+                  <label for="Department">Department</label><br />
+                  <input id="department" type="text" placeholder='Type your department' /><br />
+      
+                  <label for="username">Username</label><br />
+                  <input id="username" type="text" placeholder='Type your username' /><br />
+      
+                  <label for="Department">Password</label><br />
+                  <input id="password" type="password" placeholder='Type your password' /><br />
+      
+                  
+                  <input checked type="radio" name="faculty" id="faculty" class='faculty' />Faculty of Engineering<br />
+                  <button>
+                      Register
+                  </button>
+              </form>
+
+              <div id="error-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="error-message"></p>
+                </div>
+              </div>
+    </main>
+
+
+<script src="Registration.js"></script>
+</body>
+</html>
