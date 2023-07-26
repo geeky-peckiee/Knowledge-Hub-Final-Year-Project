@@ -25,12 +25,80 @@ registrationForm.addEventListener('submit', function(e) {
     showErrorModal('Full Name must be at least 9 characters long.');
   }
 
-  if (!registrationNumber.startsWith('17/EG')) {
-    isValid = false;
-    showErrorModal('Registration Number must start with "17/EG".');
+  // Regular expression for registration number validation
+  const regNumberRegex = /^(\d{2})\/(EG)\/(CO|AE|CE|EE|FE|ME|CV|PE)\/(\d{3,4})$/;
+  const adminRegNumberRegex = /^(EG)\/(CO|AE|CE|EE|FE|ME|CV|PE)\/(\d{3})$/;
+  // Check if the registration number matches the required format
+  if (regNumberRegex.test(registrationNumber)) {
+    // Extract the department code from the registration number
+    const departmentCode = registrationNumber.split('/')[2];
+    const departmentCodeUpper = departmentCode.toUpperCase();
+
+    // Redirect the user to the appropriate dashboard based on the department code
+    if (departmentCodeUpper === 'CO') {
+      window.location.href = 'co-dashboard.html';
+
+    } else if (departmentCodeUpper === 'AE') {
+      
+      window.location.href = 'ae-dashboard.html';
+    } else if (departmentCodeUpper === 'CE') {
+   
+      window.location.href = 'ce-dashboard.html';
+    } else if (departmentCodeUpper === 'EE') {
+     
+      window.location.href = 'ee-dashboard.html';
+    } else if (departmentCodeUpper === 'FE') {
+      
+      window.location.href = 'fe-dashboard.html';
+    } else if (departmentCodeUpper === 'ME') {
+      
+      window.location.href = 'me-dashboard.html';
+    } else if (departmentCodeUpper === 'CV') {
+     
+      window.location.href = 'cv-dashboard.html';                                
+    } else if (departmentCodeUpper === 'PE') {
+      
+      window.location.href = 'pe-dashboard.html';
+    } else {
+      // Display error message for invalid department code
+      showErrorModal('Invalid department code. Please enter a valid registration number.');
+    }
+  } else if (adminRegNumberRegex.test(registrationNumber)) {
+    if (departmentCodeUpper === 'CO') {
+      
+      window.location.href = '../Dashboard/co-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'AE') {
+      
+      window.location.href = 'ae-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'CE') {
+      
+      window.location.href = 'ce-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'EE') {
+      
+      window.location.href = 'ee-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'FE') {
+      
+      window.location.href = 'fe-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'ME') {
+      
+      window.location.href = 'me-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'CV') {
+   
+      window.location.href = 'cv-admin-dashboard.html';
+    } else if (departmentCodeUpper === 'PE') {
+      
+      window.location.href = 'pe-admin-dashboard.html';
+    } else {
+      
+      showErrorModal('You are not an admin');
+    }
+  }
+  else {
+  
+    showErrorModal('Invalid registration number format. Please enter a valid registration number.');
   }
 
-  if (username.length < 5 || !/^[A-Za-z]+$/.test(username)) {
+if (username.length < 5 || !/^[A-Za-z]+$/.test(username)) {
     isValid = false;
     showErrorModal('Username must be at least 5 alphabet characters.');
   }
@@ -40,12 +108,12 @@ registrationForm.addEventListener('submit', function(e) {
     showErrorModal('Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number.');
   }
 
-  if (isValid) {
-    // Registration logic here (store user details in database)
-    // Replace with appropriate backend implementation
-    //registerUser(fullName, registrationNumber, department, username, password);
-    window.location.href = '../Dashboard/Dashboard.html'
-}
+  // if (isValid) {
+  //   // Registration logic here (store user details in database)
+  //   // Replace with appropriate backend implementation
+  //   //registerUser(fullName, registrationNumber, department, username, password);
+  //   window.location.href = '../Dashboard/Dashboard.html'
+// }
 });
 
 closeModal.addEventListener('click', hideErrorModal);

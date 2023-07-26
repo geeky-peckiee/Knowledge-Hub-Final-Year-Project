@@ -5,8 +5,12 @@
     box-sizing: border-box;
   }
 body {
-    background-color: white;
-    width: 80em;
+    background-image: url(../Project-Images/nuesa-logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: brightness(50%) blur(2em);
+    background-size: cover;
+    width: 100em;
     max-width: 100%;
     height: 80em;
     overflow-x: hidden;
@@ -15,21 +19,23 @@ body {
 header {
     width : 98em;
     height: 5em;
-    background-color: white;
+    /* background-color: rgba(255, 255, 255, 0.1); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3em;
 
 }
-img[alt="nuesa logo"] {
+.images {
     width: 3em;
-    border-radius: 50em;
+    border-radius: 70em;
     margin-top: -1em;
     
 }
 .profile {
     margin-top: -0.5em;
+    color: white;
+    font-size: 1.3Sem;
 }
 nav {
     display: flex;
@@ -41,69 +47,63 @@ nav a {
     font-size: 1em;
     color: green;
 }
-nav button {
+ button[type="reset"] {
     background: none;
-    border-radius: 1em;
+    border-radius: 0.7em;
     font-size: 0.8em;
     padding: 0.4em;
     margin-top: -1em;
     font-weight: bold;
+    background-color:rgb(207, 112, 4) ;
     border: 2px solid rgb(207, 112, 4);
-    color: rgb(207, 112, 4);
+    color: white;
 }
-nav a:hover {
+ button[type="menu"] {
+    background: none;
+    border-radius: 0.7em;
+    font-size: 0.8em;
+    padding: 0.4em;
+    margin-top: -1em;
     font-weight: bold;
+    background-color: white;
+    border: 2px solid white;
+    color: green;
 }
+
 section {
-    width: 80em;
-    max-width: 100%;
-    height: 20em;
-    margin: 2em 2em 0em 12em;
-    display: grid;
-    grid-template-areas: 'material1 material2 material3 material4'
-                          'material5 material6 material7 material8';
-    row-gap: 2em;
-    column-gap: 0.5em;
-    }
-.Materials {
-    width: 13em;
-    background-color: green;
-    padding: 2em;
-    border-radius: 2em;
-    color: white;
+    margin: auto;
+    width: 98em;
+    margin-left: 20em;
+    margin-top: 5em;
+    
 }
- .dept-one {
-    grid-area: material1;
+select[id="level"] {
+    width: 15em;
+    border: 1px solid white;
+    border-radius: 0.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0.2em;
+
 }
-.dept-two {
-    grid-area: material2;
+select[id="semester"] {
+    width: 15em;
+    border: 1px solid white;
+    border-radius: 0.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0.2em;
+    margin-left: 3em;
 }
-.dept-three {
-    grid-area: material3;
-}
-.dept-four {
-    grid-area: material4;
-}
-.dept-five {
-    grid-area: material5;
-}
-.dept-six {
-    grid-area: material6;
-}
-.dept-seven {
-    grid-area: material7;
-}
-.dept-eight {
-    grid-area: material8;
-}
-.Materials h2{
-    color: white;
-    line-height: 1em;
-    margin-bottom: 0.5em;
-}
-.Materials a{
-    color: white;
-    line-height: 1.5em;
-    margin-top: 0.5em;
-    text-align: justify;
+input[type="search"] {
+    width: 35em;
+    border: 1px solid white;
+    border-radius: 0.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0.3em;
+    margin-left: 3em; 
+    font-weight: bold;
+    color: black;
+    background: url(../Project-Images/search-icon.png) no-repeat top left;
+    background-size: contain;
+    
+    
 }

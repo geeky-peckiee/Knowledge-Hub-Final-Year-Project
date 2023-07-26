@@ -23,48 +23,4 @@ uploadForm.addEventListener('submit', function(e) {
 
   // Perform other form validations if needed
 
-  // Show confirmation modal
-  showConfirmationModal(materialType, department, courseTitle, courseCode, fileName);
-});
-
-closeModal.addEventListener('click', hideConfirmationModal);
-
-function showConfirmationModal(materialType, department, courseTitle, courseCode, fileName) {
-  const confirmationText = `
-    Type of Material: ${materialType}<br>
-    Department: ${department}<br>
-    Course Title: ${courseTitle}<br>
-    Course Code: ${courseCode}<br>
-    File Name: ${fileName}
-  `;
-  confirmationMessage.innerHTML = confirmationText;
-  confirmationModal.style.display = 'block';
-}
-
-function hideConfirmationModal() {
-  confirmationModal.style.display = 'none';
-}
-
-function verifyKey() {
-  const confirmationKey = confirmationKeyInput.value;
-
-  // Perform key verification (e.g., check against the correct key)
-
-  if (confirmationKey === 'YOUR_CORRECT_KEY') {
-    // Call a function to upload the file to Google Drive
-    uploadToGoogleDrive();
-  } else {
-    alert('Incorrect key. Upload terminated.');
-  }
-
-  hideConfirmationModal();
-}
-
-function uploadToGoogleDrive() {
-  // Implement the file upload to Google Drive here
-  // This typically involves server-side processing and using Google Drive API
-  // Consult the Google Drive API documentation for more details on file uploads
-  // You will need to handle authentication, file upload, and saving based on the provided parameters
-  // The implementation of Google Drive upload is beyond the scope of this response
-  alert('File uploaded successfully to Google Drive!');
-}
+})
