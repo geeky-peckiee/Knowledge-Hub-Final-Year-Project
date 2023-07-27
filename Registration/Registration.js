@@ -36,29 +36,29 @@ registrationForm.addEventListener('submit', function(e) {
 
     // Redirect the user to the appropriate dashboard based on the department code
     if (departmentCodeUpper === 'CO') {
-      window.location.href = 'co-dashboard.html';
+      window.location.href = '../Dashboard/co-dashboard.html';
 
     } else if (departmentCodeUpper === 'AE') {
       
-      window.location.href = 'ae-dashboard.html';
+      window.location.href = '../Dashboard/ae-dashboard.html';
     } else if (departmentCodeUpper === 'CE') {
    
-      window.location.href = 'ce-dashboard.html';
+      window.location.href = '../Dashboard/ce-dashboard.html';
     } else if (departmentCodeUpper === 'EE') {
      
-      window.location.href = 'ee-dashboard.html';
+      window.location.href = '../Dashboard/ee-dashboard.html';
     } else if (departmentCodeUpper === 'FE') {
       
-      window.location.href = 'fe-dashboard.html';
+      window.location.href = '../Dashboard/fe-dashboard.html';
     } else if (departmentCodeUpper === 'ME') {
       
-      window.location.href = 'me-dashboard.html';
+      window.location.href = '../Dashboard/me-dashboard.html';
     } else if (departmentCodeUpper === 'CV') {
      
-      window.location.href = 'cv-dashboard.html';                                
+      window.location.href = '../Dashboard/cv-dashboard.html';                                
     } else if (departmentCodeUpper === 'PE') {
       
-      window.location.href = 'pe-dashboard.html';
+      window.location.href = '../Dashboard/pe-dashboard.html';
     } else {
       // Display error message for invalid department code
       showErrorModal('Invalid department code. Please enter a valid registration number.');
@@ -69,25 +69,25 @@ registrationForm.addEventListener('submit', function(e) {
       window.location.href = '../Dashboard/co-admin-dashboard.html';
     } else if (departmentCodeUpper === 'AE') {
       
-      window.location.href = 'ae-admin-dashboard.html';
+      window.location.href = '../Dashboard/ae-admin-dashboard.html';
     } else if (departmentCodeUpper === 'CE') {
       
-      window.location.href = 'ce-admin-dashboard.html';
+      window.location.href = '../Dashboard/ce-admin-dashboard.html';
     } else if (departmentCodeUpper === 'EE') {
       
-      window.location.href = 'ee-admin-dashboard.html';
+      window.location.href = '../Dashboard/ee-admin-dashboard.html';
     } else if (departmentCodeUpper === 'FE') {
       
-      window.location.href = 'fe-admin-dashboard.html';
+      window.location.href = '../Dashboard/fe-admin-dashboard.html';
     } else if (departmentCodeUpper === 'ME') {
       
-      window.location.href = 'me-admin-dashboard.html';
+      window.location.href = '../Dashboard/me-admin-dashboard.html';
     } else if (departmentCodeUpper === 'CV') {
    
-      window.location.href = 'cv-admin-dashboard.html';
+      window.location.href = '../Dashboard/cv-admin-dashboard.html';
     } else if (departmentCodeUpper === 'PE') {
       
-      window.location.href = 'pe-admin-dashboard.html';
+      window.location.href = '../Dashboard/pe-admin-dashboard.html';
     } else {
       
       showErrorModal('You are not an admin');
