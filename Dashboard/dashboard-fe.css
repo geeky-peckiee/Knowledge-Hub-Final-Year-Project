@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
 body {
-    background-image: url(../Project-Images/nuesa-logo.jpg);
+    background-image: url(../Project-Images/food-logo.png);
     background-repeat: no-repeat;
     background-position: center;
     backdrop-filter: brightness(50%) blur(2em);
